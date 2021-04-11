@@ -11,6 +11,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit device configurations
 $(call inherit-product, device/xiaomi/vayu/device.mk)
 
+# Gapps
+$(call inherit-product, vendor/gapps/config.mk)
+
+
 # Inherit common CandyRoms configurations
 $(call inherit-product, vendor/candy/config/common_full_phone.mk)
 

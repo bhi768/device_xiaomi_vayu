@@ -22,6 +22,12 @@ ro.vendor.qti.va_aosp.support=1
 # GBoard
 ro.com.google.ime.kb_pad_port_b=1
 
+# CandyRoms Stuff
+ro.candy.device.name=POCO X3 PRO
+ro.candy.group.url=https://t.me/CandyRoms
+ro.candy.maintainer=Bhimanand
+ro.candy.maintainer.username=bhi768
+
 # IMS
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1

@@ -14,6 +14,10 @@ $(call inherit-product, device/xiaomi/vayu/device.mk)
 # Inherit common XtendedOS configurations
 $(call inherit-product, vendor/xtended/config/common_full_phone.mk)
 
+# GAPPS
+$(call inherit-product, vendor/gapps/common/common-vendor.mk)
+XTENDED_BUILD_VARIANT := GAPPS
+
 PRODUCT_NAME := xtended_vayu
 PRODUCT_DEVICE := vayu
 PRODUCT_BRAND := POCO
@@ -29,7 +33,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys
 
-# ArrowOS additions
+# XtendedOS additions
 DEVICE_MAINTAINER := bhi768
 $(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
 

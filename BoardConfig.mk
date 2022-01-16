@@ -89,9 +89,9 @@ BOARD_KERNEL_IMAGE_NAME := Image
 ifeq ($(TARGET_PREBUILT_KERNEL),)
   TARGET_KERNEL_CONFIG := vayu_user_defconfig
   TARGET_KERNEL_CLANG_COMPILE := true
-  TARGET_KERNEL_CLANG_VERSION := proton
+  TARGET_KERNEL_CLANG_VERSION := r437112b
   TARGET_KERNEL_CLANG_PROTON := true
-  TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-proton
+  TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-r437112b
   KERNEL_SUPPORTS_LLVM_TOOLS := true
   TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu
   TARGET_KERNEL_SOURCE := kernel/xiaomi/vayu

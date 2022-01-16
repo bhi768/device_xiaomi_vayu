@@ -68,6 +68,12 @@ BOARD_HAVE_QCOM_FM := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 LOC_HIDL_VERSION := 4.0
 
+# GAPPS
+ifeq ($(GAPPS),true)
+$(call inherit-product, vendor/gapps/common/common-vendor.mk)
+XTENDED_BUILD_VARIANT := GAPPS
+endif
+
 # Input
 TARGET_INPUTDISPATCHER_SKIP_EVENT_KEY := 304
 
@@ -91,6 +97,7 @@ ifeq ($(TARGET_PREBUILT_KERNEL),)
   TARGET_KERNEL_CLANG_COMPILE := true
   TARGET_KERNEL_CLANG_VERSION := proton
   TARGET_KERNEL_CLANG_PROTON := true
+  TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-proton
   KERNEL_SUPPORTS_LLVM_TOOLS := true
   TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
   TARGET_KERNEL_SOURCE := kernel/xiaomi/vayu

@@ -14,6 +14,13 @@ $(call inherit-product, device/xiaomi/vayu/device.mk)
 # Inherit common XtendedOS configurations
 $(call inherit-product, vendor/xtended/config/common_full_phone.mk)
 
+# GAPPS
+#ifeq ($(GAPPS),true)
+$(call inherit-product, vendor/gapps/common/common-vendor.mk)
+XTENDED_BUILD_VARIANT := GAPPS
+#endif
+
+#
 PRODUCT_NAME := xtended_vayu
 PRODUCT_DEVICE := vayu
 PRODUCT_BRAND := POCO
